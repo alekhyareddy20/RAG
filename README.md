@@ -1,27 +1,52 @@
 # RAG
-## 1) Setup and installation instructions
 
-**Clone the Repository:**
+## Setup and Installation Instructions
+### 1. Clone the Repository
+```bash
 git clone https://github.com/alekhyareddy20/RAG.git
 cd RAG
-**Create Virtual Environment:**
+```
+
+### 2. Create Virtual Environment
+```bash
 python -m venv venv
-MAC: source venv/bin/activate  #   Windows: venv\Scripts\activate
-**Install Dependencies:**
+
+# On macOS/Linux:
+source venv/bin/activate
+
+# On Windows:
+venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
-**Set Up Hugging Face API Key:**
-[I didn't include a token in the code; rather, I used Hugging Face CLI]
-Create a token in Hugging Face 
-Use the command below to log in:
+```
+
+### 4. Set Up Hugging Face API Key
+> **Note:** I used Hugging Face CLI for authentication instead of hardcoding tokens.
+
+1. Create a token at [Hugging Face]
+2. Log in using the CLI:
+```bash
 huggingface-cli login
-- Then enter your token
-**Create or update the Chroma DB:**
+```
+3. Enter your token when prompted
+
+### 5. Create or Update the Chroma DB
+```bash
+# Standard creation:
 python DB_model.py
-OR
-python DB_model.py --reset [This is to use to clear the existing database before creating a new one]
-**Web Interface:**
+
+# Clear existing database before creating new one:
+python DB_model.py --reset
+```
+
+### 6. Launch Web Interface
+```bash
 streamlit run streamlitapp.py
-- This will navigate to your browser
+```
+This will automatically open the application in your browser.
 
 ## 2) A brief description of  approach and design decisions
 ## 3) Technologies  previously familiar vs. new 
