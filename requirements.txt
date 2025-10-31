@@ -1,0 +1,14 @@
+pypdf
+langchain
+chromadb # Vector storage
+pytest
+boto3
+langchain-ollama
+langchain-aws
+langchain-community
+sentence-transformers
+scikit-learn
+huggingface_hub
+streamlit
+nltk
+torch
