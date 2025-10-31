@@ -149,7 +149,7 @@ Here's what I prioritized when choosing models:
 - **Real-world testing is crucial** - Leaderboard scores don't tell the whole story; you have to test with your actual data
 - **Think holistically** - The best system balances speed, quality, AND cost—not just accuracy alone
 
-## 4. Vector Database: ChromaDB
+### 4. Vector Database: ChromaDB
 
 -  **Lightweight and easy to set up** — no external dependencies required  
 -  **Excellent persistence and fast in-memory performance**  
@@ -159,7 +159,7 @@ Here's what I prioritized when choosing models:
 
 ---
 
-## 5. Retrieval Strategy
+### 5. Retrieval Strategy
 
 **Decision:** Retrieve **top-5 most similar chunks (`k=5`)**
 
@@ -171,7 +171,7 @@ Here's what I prioritized when choosing models:
 
 ---
 
-## 6. Prompt Engineering
+### 6. Prompt Engineering
 
 The system uses a **structured, context-restricted prompt template** designed to:
 
@@ -186,7 +186,7 @@ The system uses a **structured, context-restricted prompt template** designed to
 
 ---
 
-## Previously Familiar Technologies
+### Previously Familiar Technologies
 
 - **Python:** Core programming language used for scripting, data processing, and model integration  
 - **NumPy:** Efficient array operations and numerical computing  
@@ -199,7 +199,7 @@ The system uses a **structured, context-restricted prompt template** designed to
 
 ---
 
-## New Technologies & Learnings
+### New Technologies & Learnings
 
 - **Streamlit:** Built interactive web apps for AI-powered document Q&A systems  
 - **PyTorch (for Embeddings):** Learned tensor operations and embedding generation for semantic search  
@@ -212,7 +212,7 @@ The system uses a **structured, context-restricted prompt template** designed to
 --- See the full questions and expected answers in the provided txt file in the repository.
 ### Evaluation:
 
-## 1) Ground Truth Creation
+### 1) Ground Truth Creation
 
 Since this is an open-ended QA task without pre-existing gold standards, I created ground truth answers using a human-expert evaluation approach.  
 
@@ -240,7 +240,7 @@ Since this is an open-ended QA task without pre-existing gold standards, I creat
 - Not suitable for large-scale evaluation (currently limited to 5 questions; adding more requires updating `qwen_model.py`).  
 - Requires careful validation against the source documents to maintain accuracy.
 
-## 2) Semantic Similarity Score
+### 2) Semantic Similarity Score
 
 **Definition:**  
 The similarity score is calculated as:  
@@ -255,14 +255,12 @@ This score indicates how semantically close the generated answer is to the expec
 - Captures meaning similarity beyond exact word matches.  
 - More robust than traditional text-based metrics like BLEU or ROUGE, which rely heavily on surface-level text overlap. 
 
-## Analysis
+### Analysis
 
 - **Consistently high scores:** All questions scored above the 0.60 threshold, indicating good answer quality.  
 - **Best performer:** The "Claryo" question achieved a score of 0.83, showing that the system performs particularly well on specific, focused topics.  
 
 ## 5) What works well:
-
-## Key Findings
 
 ### High-Quality Answer Generation
 - Achieved an average semantic similarity of 60%, indicating that generated answers closely align with expert responses.  
@@ -286,7 +284,7 @@ This score indicates how semantically close the generated answer is to the expec
 
 ## 6 & 7) Known limitations/issues   AND     Add/remove/change with more time
 
-## Limitations & Observations
+### Limitations & Changes
 
 ### Manual Evaluation Process
 - **Issue:** Creating ground truth answers currently requires manual effort using ChatGPT or another AI, and each question must be manually entered into the code for evaluation.  
